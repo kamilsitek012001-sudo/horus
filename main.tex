@@ -1,0 +1,432 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Pakiety podstawowe ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\onehalfspacing
+
+% --- Pakiety dodatkowe ---
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+% --- Definicja kolorów ---
+\definecolor{darkblue}{RGB}{0,51,102}
+\definecolor{darkgray}{RGB}{64,64,64}
+
+% --- Konfiguracja tytułów sekcji ---
+\titleformat{\section}
+  {\Large\bfseries\color{darkblue}}{{\thesection}.}{0.8em}{}[\titlerule]
+\titleformat{\subsection}
+  {\large\bfseries\color{darkgray}}{\thesubsection.}{0.8em}{}
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{darkgray}}{\thesubsubsection.}{0.8em}{}
+
+\titlespacing{\section}{0pt}{18pt}{8pt}
+\titlespacing{\subsection}{0pt}{14pt}{6pt}
+\titlespacing{\subsubsection}{0pt}{10pt}{4pt}
+
+% --- Nagłówki i stopki ---
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\color{darkgray}\textit{Bioaktywność cynku i flawanonów: monografia molekularna}}
+\rhead{\small\color{darkgray}Strona \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{darkblue}\leaders\hrule height \headrulewidth\hfill}}
+
+% --- Hyperref ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    citecolor=darkblue,
+    urlcolor=darkblue,
+    pdftitle={Bioaktywność cynku i flawanonów: monografia molekularna},
+    pdfauthor={},
+    pdfsubject={Biochemia molekularna}
+}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ============================================================
+\section{Wpływ cynku na kluczowe aktywności biologiczne}
+% ============================================================
+
+W ostatnim dziesięcioleciu nastąpiła zasadnicza zmiana paradygmatu w rozumieniu biologii molekularnej cynku (Zn\(^{2+}\)). Pierwiastek ten przestał być postrzegany wyłącznie jako strukturalny kofaktor metaloenzymów, a został włączony w grono najistotniejszych wewnątrzkomórkowych mediatorów sygnałowych -- pod względem rozległości oddziaływań porównywalny z jonami wapnia. Zgodnie z ustaleniami Chena i współpracowników \cite{chen2024} oraz wcześniejszymi pracami przeglądowymi Kambe i in. \cite{kambe2015}, ścisła kontrola wewnątrzkomórkowego stężenia cynku warunkuje zachowanie proteostazy, właściwy przebieg metabolizmu energetycznego oraz prawidłową regulację procesów podziałowych i apoptotycznych. Warto zaznaczyć, że wyjątkowa pozycja cynku wśród mikroelementów przejściowych wynika z jego niezwykłej plastyczności koordynacyjnej: kation ten tworzy wiązania zarówno z tiolowymi grupami cysteiny i pierścieniami imidazolowymi histydyny, jak i z anionowymi łańcuchami bocznymi kwasów asparaginowego oraz glutaminowego, dzięki czemu może być precyzyjnie osadzany w miejscach katalitycznych enzymów o odmiennej geometrii przestrzennej -- tetraedrycznej, oktaedrycznej bądź pięciokoordynacyjnej \cite{chasapis2020, maret2019}.
+
+Aparatura molekularna odpowiedzialna za utrzymanie równowagi cynkowej obejmuje 24 białka transportowe przynależne do dwóch funkcjonalnie przeciwstawnych nadrodzin: importerów ZIP (nadrodzina SLC39A), kierujących strumień jonów do cytoplazmy, oraz eksporterów ZnT (nadrodzina SLC30A), usuwających cynk z przedziału cytozolowego lub gromadzących go w obrębie organelli -- kompleksu Golgiego, pęcherzyków sekrecyjnych czy endosomów \cite{hara2017, kambe2015}. Szacuje się, że ponad 10\% białek kodowanych w ludzkim genomie wymaga cynku do prawidłowego funkcjonowania; dotyczy to przeszło 300 enzymów oraz blisko 2000 czynników transkrypcyjnych, co plasuje ten pierwiastek w gronie najbardziej uniwersalnych regulatorów procesów komórkowych \cite{chen2024, chasapis2020}. Stężenie labilnego, niezwiązanego z białkami cynku w cytoplazmie jest utrzymywane na skrajnie niskim poziomie -- w przedziale pikомоlarnym do nanomolarnego -- co ma uzasadnienie fizjologiczne: już przejściowy wzrost do zakresu mikromolarnego wyzwala łańcuch zdarzeń cytotoksycznych prowadzących ostatecznie do programowanej śmierci komórki \cite{maret2019, chen2024}.
+
+% -----------------------------------------------------------
+\subsection{Homeostaza cynku: przyswajanie, transport i magazynowanie}
+% -----------------------------------------------------------
+
+Zachowanie prawidłowej gospodarki cynkowej stanowi warunek niezbędny do utrzymania homeostazy ustrojowej. Całkowita zawartość tego pierwiastka w organizmie dorosłego człowieka oscyluje wokół 2--3~g, przy czym -- odmiennie niż w przypadku żelaza deponowanego w hepatocytach -- nie istnieje wyodrębniony narząd pełniący wyłączną funkcję rezerwuarową dla cynku \cite{hara2017, stiles2024}. Okoliczność ta wymusza stałe uzupełnianie puli tego mikroelementu drogą alimentarną; rekomendowane dzienne spożycie wykazuje znaczną zmienność zależną od wieku, płci oraz stanu fizjologicznego organizmu -- wynosi od 2~mg u noworodków do 11--13~mg u dorosłych mężczyzn, przy czym zapotrzebowanie wzrasta w okresie gestacji i laktacji \cite{stiles2024}. Fizjologiczna homeostaza tego jonu opiera się na wielopoziomowej, dynamicznej regulacji procesów jelitowej absorpcji, transportu osoczowego, redystrybucji tkankowej oraz eliminacji z ustroju \cite{maares2020}. Dominującą drogą usuwania cynku pozostaje przewód pokarmowy -- odpowiada on za wydalenie ok.\ 90\% eliminowanego pierwiastka, głównie wraz z sekretami trzustkowymi i jelitowymi, podczas gdy wydalanie nerkowe ma charakter marginalny \cite{maares2020, stiles2024}.
+
+\subsubsection*{Przyswajanie (absorpcja)}
+
+Wchłanianie cynku odbywa się na całym odcinku jelita cienkiego, choć zdecydowanie najintensywniej przebiega w jego proksymalnych segmentach -- dwunastnicy i jelicie czczym \cite{maares2020, stiles2024}. Pod względem kinetycznym jest to transport nasycalny, podlegający ścisłej modulacji w zależności od aktualnego bilansu cynkowego organizmu. W warunkach niedoboru odsetek absorbowanego jonu może wzrastać w sposób dramatyczny -- u modeli zwierzęcych odnotowano wartości sięgające 90\% podanej dawki luminale, natomiast obfita podaż żywieniowa obniża ten wskaźnik do zaledwie 15--35\% \cite{hara2017, maares2020}. Mechanizmy adaptacji enterocytarnej obejmują zarówno szybkie, potranslacyjne procesy redystrybucji transporterów między błonami wewnątrzkomórkowymi a powierzchnią apikalną, jak i wolniejszą regulację na poziomie transkrypcji genów kodujących białka nośnikowe \cite{kambe2015}.
+
+Centralną rolę w aktywnym pobieraniu jonów Zn\(^{2+}\) ze światła jelita przez szczytową powierzchnię enterocytów odgrywa transporter ZIP4, produkt genu \textit{SLC39A4} \cite{kambe2015, maares2020, stiles2024}. Białko to cechuje się swoistą budową przestrzenną: jego fragment ektoplazmatyczny zawiera sekwencję wzbogaconą w reszty histydynowe, działającą niczym molekularny receptor wstępnie zagęszczający jony cynku w bezpośrednim sąsiedztwie kanału transportowego \cite{kambe2015}. W odpowiedzi na obniżone stężenie cynku ustrojowego ZIP4 podlega szybkiej translokacji z pęcherzyków endosomalnych na membranę apikalną enterocytu -- mechanizm ten należy do najszybszych znanych reakcji kompensacyjnych ustroju na deficyt mikroelementu \cite{hara2017}. Znaczenie kliniczne tego nośnika ilustruje monogenowa choroba \textit{Acrodermatitis enteropathica}, dziedziczona autosomalnie recesywnie. Mutacje upośledzające funkcję ZIP4 prowadzą do praktycznie całkowitej niezdolności absorpcji żywieniowego cynku, co manifestuje się utratą włosów, zmianami wyprzeniowymi skóry, uporczywymi biegunkami i bezpośrednim zagrożeniem życia w okresie noworodkowym \cite{hara2017, stiles2024}. Funkcję ZIP4 na błonie apikalnej uzupełnia wariant B transportera ZnT5, wspomagający precyzyjną regulację lokalnego przepływu cynku w nabłonku jelitowym \cite{maares2020, stiles2024}.
+
+Na wydajność wchłaniania istotny wpływ wywiera również kompozycja spożywanego pokarmu. Najsilniejszym endogennym antagonistą absorpcji cynku są fityniany -- estry kwasu fitynowego, obficie występujące w nasionach roślin strączkowych i produktach pełnoziarnistych. W warunkach fizjologicznego pH jelitowego fityniany tworzą słabo rozpuszczalne agregaty chelatowe, które skutecznie wiążą cynk i uniemożliwiają jego absorpcję \cite{maares2020}. Analogiczny efekt hamujący wywierają duże dawki suplementacyjne żelaza niehemowego i wapnia, wchodzące w kompetycję o wspólne systemy transportowe rąbka szczoteczkowego. Czynnikami sprzyjającymi absorpcji są natomiast produkty trawienia białek -- wolne aminokwasy i oligopeptydy (przede wszystkim cysteina i histydyna, formujące z cynkiem amfifilowe chelaty łatwo przechodzące przez dwuwarstwę lipidową), a także aniony cytrynianowe obecne w wybranych produktach mlecznych \cite{maares2020, stiles2024}. Dodatkową rolę ochronną odgrywa warstwa śluzowa pokrywająca nabłonek -- mucyny w niej zawarte wiążą przejściowo nadmiar cynku, chroniąc enterocyty przed epizodami toksycznego obciążenia \cite{maares2020}.
+
+\subsubsection*{Transport}
+
+Bezpośrednie pojawienie się wolnych jonów Zn\(^{2+}\) w cytoplazmie enterocytu wiązałoby się z ryzykiem uszkodzeń oksydacyjnych; z tego powodu niezwłocznie po internalizacji jony te są przechwytywane przez metalotioneiny (MT) -- grupę drobnocząsteczkowych białek bogatych w reszty cysteinowe, pełniących funkcję cytozolowego bufora metalowego \cite{maares2020}. Rodzina metalotionein obejmuje izoformy MT-1 do MT-4, o masie cząsteczkowej 6--7~kDa, zdolne do jednoczesnego związania od 5 do 12 atomów cynku w obrębie jednej cząsteczki. Ich biosynteza jest silnie stymulowana przez sam cynk za pośrednictwem czynnika transkrypcyjnego MTF-1, co generuje wydajny mechanizm ujemnego sprzężenia zwrotnego chroniący komórkę przed gromadzeniem się wolnego kationu w stężeniach toksycznych \cite{hara2017, maares2020}. Dalszy transfer wchłoniętego cynku do krwiobiegu wrotnego wymaga jego asymetrycznego eksportu przez membranę bazolateralną enterocytu, realizowanego głównie przez transporter ZnT1 (gen \textit{SLC30A1}) \cite{kambe2015, maares2020, stiles2024}.
+
+Po przedostaniu się do przestrzeni naczyniowej jony cynku zostają natychmiast związane przez białka nośnikowe osocza. Przeważająca frakcja -- obejmująca 60--80\% całkowitego cynku krążącego -- tworzy odwracalne, labilne kompleksy z albuminą surowiczą, stanowiąc łatwo mobilizowalne źródło pierwiastka dla tkanek wykazujących zwiększone zapotrzebowanie. Pozostała część (ok.\ 20--30\%) podlega ścisłej asocjacji z \(\alpha_2\)-makroglobuliną, a niewielkie ilości transportowane są w postaci kompleksów z wolnymi aminokwasami bądź transferyną \cite{hara2017, maares2020, stiles2024}. Albumina -- oprócz roli czysto transportowej -- uczestniczy w regulacji biodostępności cynku: jej powinowactwo do tego kationu zmienia się pod wpływem wahań pH i stężenia wolnych kwasów tłuszczowych, umożliwiając preferencyjne uwalnianie cynku w tkankach charakteryzujących się obniżonym pH, towarzyszącym intensywnemu metabolizmowi \cite{stiles2024}. Warto podkreślić, że pomimo rozległej dystrybucji narządowej zaledwie 0,1\% całkowitych zasobów cynku w organizmie przypada na przedział wewnątrznaczyniowy \cite{hara2017, stiles2024}, co znacząco ogranicza wartość diagnostyczną oznaczeń surowiczych w ocenie rzeczywistego statusu cynkowego ustroju.
+
+\subsubsection*{Magazynowanie i wewnątrzkomórkowe zagospodarowanie}
+
+Głównym depotem ustrojowym cynku jest tkanka mięśni poprzecznie prążkowanych, kumulująca 50--60\% ogólnej puli tego pierwiastka -- fakt ten wynika przede wszystkim z proporcjonalnie dużej masy mięśniowej, a nie ze szczególnie wysokiej koncentracji cynku w przeliczeniu na gram tkanki \cite{hara2017, stiles2024}. Drugie co do wielkości rezerwy -- obejmujące 30--36,7\% zasobów -- lokalizują się w tkance kostnej; cynk wbudowany w strukturę krystaliczną hydroksyapatytu stanowi rezerwę trudno dostępną metabolicznie, mobilizowaną wyłącznie podczas osteoklastycznej resorpcji kości, co może być upośledzone w przewlekłych niedoborach oraz w populacji osób starszych \cite{hara2017, stiles2024}. Na wątrobę i skórę przypada stosunkowo niewielki udział -- po 3--5\% \cite{hara2017, stiles2024}, co dodatkowo podważa wiarygodność oznaczeń cynku we krwi obwodowej jako miernika faktycznego wysycenia tkanek \cite{maares2020}.
+
+Wewnątrzkomórkowa dystrybucja cynku podlega koordynacji ze strony zintegrowanej sieci 14 importerów z nadrodziny ZIP i 10 eksporterów z nadrodziny ZnT, wspieranych przez metalotioneiny \cite{hara2017, kambe2015}. Poszczególne izotypy ZnT wykazują ściśle zdefiniowaną topologię subkomórkową: ZnT1 lokalizuje się wyłącznie w błonie plazmatycznej i odpowiada za wypływ cynku z komórki; ZnT2, ZnT4 i ZnT8 rezydują w membranach endosomów oraz ziarnistości wydzielniczych; ZnT5, ZnT6 i ZnT7 koncentrują się w obrębie aparatu Golgiego, gdzie uczestniczą w obligatoryjnej metalacji nowosyntetyzowanych enzymów -- między innymi fosfatazy zasadowej (TNAP) i karboksypeptydaz -- wymagających inkorporacji cynku do osiągnięcia pełnej aktywności katalitycznej \cite{hara2017, kambe2015}. W komórkach \(\beta\) wysp trzustkowych izoforma ZnT8 generuje nadzwyczaj wysokie stężenie cynku w ziarnistościach sekrecyjnych (rzędu kilkudziesięciu milimoli), niezbędne do krystalizacji i stabilizacji heksamerycznych agregatów insulinowych \cite{hara2017, stiles2024}. Polimorfizmy genu \textit{SLC30A8} kodującego ZnT8 zostały rozpoznane w badaniach asocjacji genomowych na szeroką skalę (GWAS) jako warianty predysponujące do cukrzycy typu 2, co jednoznacznie wiąże dysregulację transportu cynku z etiopatogenezą tej choroby metabolicznej \cite{tamura2021}.
+
+
+
+% -----------------------------------------------------------
+\subsection{Aktywność przeciwnowotworowa, rearanżacja mikrośrodowiska i mechanizmy oporności}
+% -----------------------------------------------------------
+
+Udział cynku w onkogenezie i progresji nowotworowej cechuje się wyraźną dwuznacznym charakterem, a kierunek jego oddziaływania na rozwój guza zależy w decydujący sposób od typu histologicznego tkanki oraz wzorca ekspresji poszczególnych transporterów cynkowych \cite{bafaro2017}. W gruczolaku stercza stwierdza się znaczne obniżenie wewnątrzkomórkowego stężenia cynku, będące konsekwencją zmniejszonej syntezy białek ZIP1, ZIP2 i ZIP3. Spadek ten jest kluczowy dla przebudowy metabolicznej transformowanej komórki: w warunkach prawidłowych cynk akumulowany w cytozolu komórek prostaty blokuje aktywność mitochondrialnej akonitazy, wstrzymując przemiany cyklu kwasów trójkarboksylowych i ograniczając wytwarzanie ATP do poziomu wystarczającego jedynie dla podstawowych procesów życiowych. Utrata tej bariery metabolicznej pozwala komórkom neoplastycznym na intensyfikację fosforylacji oksydacyjnej, niezbędną do podtrzymania agresywnej proliferacji -- zjawisko to bywa określane mianem ,,onkogennej utraty cynkowego hamulca metabolicznego'' \cite{bafaro2017}. Odwrotną sytuację obserwuje się w nowotworach gruczołu piersiowego oraz trzustki, gdzie nadmierna ekspresja importerów ZIP4, ZIP6 (LIV-1) i ZIP10 koreluje z fenotypem wysoko złośliwym, indukcją transformacji nabłonkowo-mezenchymalnej (EMT) oraz nasilonym potencjałem przerzutowym wynikającym z aktywacji osi sygnałowej ERK1/2--Snail/Slug \cite{bafaro2017}. Transportery ZIP6 i ZIP10 współdziałają synergistycznie: podlegając stymulacji ze strony STAT3, zwiększają pulę cytozolowego cynku, który zwrotnie potęguje aktywność tego czynnika transkrypcyjnego, tworząc pętlę dodatniego sprzężenia napędzającą inwazyjność komórek nowotworowych \cite{bafaro2017, chen2024}.
+
+Osobliwie złożone mechanizmy eksploatacji cynku przez nowotwory ujawnili Ni i współautorzy \cite{ni2022}. Wykorzystując technologię sekwencjonowania transkryptomu pojedynczych komórek (scRNA-seq) w eksperymentalnym modelu raka płuca, autorzy zidentyfikowali wyodrębnioną subpopulację fibroblastów towarzyszących guzowi (CAF) charakteryzujących się podwyższoną ekspresją ZIP1. W odpowiedzi na ekspozycję chemioterapeutyczną (doksorubicynę bądź paklitaksel) fibroblasty te przejmują funkcję aktywnego rezerwuaru cynku, przekazywanego następnie bezpośrednio do komórek rakowych za pośrednictwem połączeń szczelinowych (ang.\ \textit{gap junctions}) zbudowanych z koneksyny-43 (Cx43). Gwałtowny napływ Zn\(^{2+}\) uruchamia w komórkach nowotworowych kaskadę przeżyciową z udziałem kinazy AKT, skutkującą wzrostem poziomu pompy efluksowej ABCB1 (P-glikoproteiny), aktywnie usuwającej cząsteczki cytostatyku z wnętrza komórki \cite{ni2022}. Co istotne, zarówno farmakologiczna blokada złączy szczelinowych antagonistą Cx43, jak i genetyczne wygaszenie ekspresji ZIP1 w fibroblastach przywracało podatność komórek nowotworowych na doksorubicynę -- zarówno w układach hodowlanych \textit{in vitro}, jak i w mysich modelach heteroprzeszczepowych -- otwierając perspektywę terapeutycznego ,,rozbrojenia'' cynkowej osłony generowanej przez mikrośrodowisko guza \cite{ni2022}.
+
+Ponadto, jak podkreślają Chasapis i współpracownicy \cite{chasapis2020}, cynk jest elementem nieodzownym dla zachowania prawidłowej konformacji białka supresorowego p53 -- najczęściej mutowanego produktu genowego w ludzkich nowotworach. Jon cynku jest koordynowany przez cztery reszty aminokwasowe (Cys176, His179, Cys238, Cys242) tworzące palec cynkowy w domenie wiążącej DNA białka p53; jego utrata -- spowodowana niedoborem cynku lub kompetycyjnym wypieraniem przez metale toksyczne (np.\ kadm) -- skutkuje destabilizacją tej domeny i zniesieniem zdolności p53 do specyficznego rozpoznawania sekwencji docelowych. W konsekwencji geny regulowane przez p53, kodujące między innymi inhibitor cyklu komórkowego p21, proapoptotyczne białka (BAX, PUMA) oraz enzymy systemu naprawy DNA, nie ulegają indukcji, co eliminuje barierę antymutacyjną i sprzyja transformacji nowotworowej \cite{chasapis2020}.
+
+% -----------------------------------------------------------
+\subsection{Aktywność przeciwdrobnoustrojowa i systemy intoksykacji fagocytarnej}
+% -----------------------------------------------------------
+
+W kontekście obrony przed patogenami organizm gospodarza posługuje się cynkiem jako narzędziem wyrafinowanej strategii określanej mianem odporności żywieniowej (ang.\ \textit{nutritional immunity}). Wessels i współautorzy \cite{wessels2017} opisują ten mechanizm jako dwukierunkowy system kontroli dostępności metali. Pierwsza linia obrony polega na wydzielaniu białek o wysokim powinowactwie do cynku, takich jak kalprotektyna (heterodimer S100A8/S100A9) oraz psoriasyna (S100A7). Sekwestracja jonów Zn\(^{2+}\) w przestrzeni pozakomórkowej pozbawia bakterie dostępu do tego niezbędnego kofaktora, uniemożliwiając im replikację materiału genetycznego, prawidłowe funkcjonowanie enzymów metabolicznych oraz wytwarzanie czynników wirulencji -- strategia ta jest szczególnie skuteczna wobec patogenów takich jak \textit{Clostridium difficile}, \textit{Staphylococcus aureus} czy \textit{Acinetobacter baumannii} \cite{wessels2017}. Kalprotektyna, uwalniana w znacznych ilościach przez neutrofile i makrofagi w ognisku infekcyjnym, potrafi obniżyć lokalne stężenie biodostępnego cynku poniżej wartości progowej wymaganej do podziału wielu gatunków drobnoustrojów, co sytuuje ją w gronie najważniejszych efektorów wrodzonej odpowiedzi przeciwbakteryjnej \cite{wessels2017}.
+
+Równolegle, na szczeblu wewnątrzkomórkowym, komórki fagocytarne wykorzystują cynk jako toksyczne narzędzie bójcze. Kim i Lee \cite{kimlee2021} przedstawiają szczegółową analizę zjawiska, w którym po pochłonięciu bakterii (np.\ \textit{Mycobacterium tuberculosis}) dochodzi do gwałtownego, aktywnego wpompowywania jonów cynku do przedziału fagosomalnego przez transportery ZnT1 i ATP-azę miedziową typu P (ATP7A). Osiągnięcie wysokiego stężenia wolnego cynku w fagosomie wyzwala u patogenu zjawisko mismetalacji: nadmiar cynku wypiera jony żelaza i manganu z ich ośrodków katalitycznych w kluczowych enzymach metabolicznych i bakteryjnych dysmutazach ponadtlenkowych, co prowadzi do paraliżu metabolizmu i śmierci komórki drobnoustrojowej \cite{kimlee2021}. Mechanizm ten jest szczególnie skuteczny przeciwko bakteriom pozbawionym wydajnych systemów efluksu cynku -- takim jak \textit{Streptococcus pneumoniae} czy \textit{Haemophilus influenzae} -- niezdolnym do efektywnego usunięcia nadmiaru tego jonu z własnego przedziału cytoplazmatycznego. Niezależnie od tego, cynk obecny w cytozolu fagocytów warunkuje zdolność do generowania wybuchu oddechowego poprzez aktywację kompleksu oksydazy NADPH; jego deficyt poważnie upośledza tworzenie zewnątrzkomórkowych pułapek neutrofilowych (NETs), co wiąże się ze zwiększoną podatnością na zakażenia grzybicze, zwłaszcza aspergilozę inwazyjną wywoływaną przez \textit{Aspergillus fumigatus} \cite{wessels2017}. Dodatkowo Chasapis i współautorzy \cite{chasapis2020} wskazują na bezpośrednie działanie antywirusowe cynku, polegające na hamowaniu wirusowej polimerazy RNA oraz proteazy 3CL niezbędnej do proteolitycznego dojrzewania wirionów -- właściwość ta ma udokumentowane znaczenie kliniczne w skracaniu czasu trwania infekcji oddechowych oraz epizodów biegunkowych u dzieci.
+
+
+
+% -----------------------------------------------------------
+\subsection{Regulacja przeciwkrzepliwa, homeostaza naczyniowa i stabilizacja śródbłonka}
+% -----------------------------------------------------------
+
+Oddziaływanie cynku na układ sercowo-naczyniowy i procesy hemostazy jest głęboko zakorzenione w biologii komórek wyściółki naczyniowej oraz mechanizmach aktywacji trombocytów \cite{tamura2021}. Na poziomie molekularnym cynk przeciwdziała apoptozie endotelium indukowanej przez prozapalny czynnik martwicy nowotworu alfa (TNF-$\alpha$) oraz nasycone kwasy tłuszczowe, zapobiegając tym samym obnażeniu struktur subendotelialnych i wtórnemu uruchomieniu kaskady koagulacyjnej. Efekt protekcyjny realizowany jest poprzez stabilizację antyapoptotycznego białka Bcl-2 oraz blokowanie aktywacji prokaspaz 3 i 9 w komórkach śródbłonka poddanych stresowi metabolicznemu \cite{tamura2021, costa2023}.
+
+Jednym z najistotniejszych mechanizmów ochrony naczyniowej jest rola cynku jako obligatoryjnego kofaktora śródbłonkowej syntazy tlenku azotu (eNOS). Zgodnie z danymi przedstawionymi przez Costę i współpracowników \cite{costa2023}, jony cynku utrzymują stabilność struktury dimerycznej eNOS dzięki koordynacji reszt cysteinowych w obrębie specyficznego miejsca Zn\(^{2+}\)-DTNB na interfejsie obu podjednostek, tworząc charakterystyczny tetraedryczny klaster cynkowy. W stanach niedoboru cynku dochodzi do zjawiska odsprzężenia enzymu (ang.\ \textit{eNOS uncoupling}), wskutek czego eNOS zamiast wytwarzać wazoprotektywny tlenek azotu (NO) generuje toksyczne anionorodniki ponadtlenkowe, paradoksalnie nasilając stres oksydacyjny w tkance, którą fizjologicznie chroni \cite{costa2023}. Tlenek azotu -- będąc najsilniejszym endogennym czynnikiem wazodylatacyjnym i inhibitorem agregacji płytek -- odgrywa kluczową rolę w zapobieganiu nadkrzepliwości i nadciśnieniu tętniczemu; jego niedobór wynikający z dyshomeostazy cynkowej bezpośrednio predysponuje do powikłań naczyniowych. Niezależnie od tego cynk oddziałuje bezpośrednio na trombocyty -- modulując wewnątrzkomórkowe stężenie wapnia oraz wpływając na aktywność kinaz białkowych, ogranicza nadmierną reaktywność płytek wobec agonistów fizjologicznych, takich jak ADP czy kolagen \cite{tamura2021}. W aspekcie metabolicznym na uwagę zasługuje fakt, że cynk uwalniany z ziarnistości sekrecyjnych komórek \(\beta\) trzustki, docierając do wysp trzustkowych drogą krążenia wrotnego w podwyższonych stężeniach, bezpośrednio hamuje sekrecję glukagonu przez komórki \(\alpha\) -- mechanizm ten, określany mianem paraendokrynnej sygnalizacji cynkowej, stanowi dodatkowy, niezależny od insuliny element kontroli glikemii \cite{tamura2021}. Prawidłowy bilans cynkowy zapobiega ponadto przedwczesnej aktywacji czynnika XII (czynnika Hagemana) -- inicjatora wewnątrzpochodnego szlaku krzepnięcia -- co współdecyduje o utrzymaniu krwi w stanie fizjologicznej płynności.
+
+% -----------------------------------------------------------
+\subsection{Biologia redoks i mechanizmy antyoksydacyjne cynku}
+% -----------------------------------------------------------
+
+Pomimo że cynk ze względu na swoją konfigurację elektronową (3d\(^{10}\)) nie uczestniczy bezpośrednio w reakcjach oksydoredukcyjnych, Maret \cite{maret2019} definiuje go jako centralny regulator wewnątrzkomórkowej równowagi redoks, wprowadzając koncepcję tzw.\ cynkowych przełączników redoks (ang.\ \textit{redox zinc switches}). Funkcjonowanie tego systemu jest nierozerwalnie sprzężone z metalotioneinami (MT) -- niskocząsteczkowymi białkami o masie ok.\ 6--7~kDa, zdolnymi do koordynacji siedmiu jonów cynku za pośrednictwem reszt cysteinowych. Pod wpływem stresu oksydacyjnego reaktywne formy tlenu (ROS) -- w szczególności nadtlenek wodoru i kwas podchlorawy -- utleniają grupy tiolowe metalotionein z wytworzeniem mostków disiarczkowych, co prowadzi do kontrolowanego uwalniania jonów Zn\(^{2+}\) do cytoplazmy. Ilość uwolnionego cynku pozostaje w ścisłej proporcji do natężenia bodźca oksydacyjnego, tworząc precyzyjny, stopniowalny układ transdukcji sygnału \cite{maret2019}.
+
+Uwolnione jony cynku pełnią rolę wtórnego przekaźnika sygnałowego, inicjując aktywację czynnika transkrypcyjnego Nrf2 (ang.\ \textit{Nuclear factor erythroid 2-related factor 2}) na drodze hamowania jego represora białkowego KEAP1. Aktywowany Nrf2 przemieszcza się do jądra komórkowego i wiąże z elementem odpowiedzi antyoksydacyjnej (ARE) w regionach regulatorowych genów kodujących enzymy obrony antyoksydacyjnej: oksygenazę hemową-1 (HO-1), peroksyredoksyny 1 i 2, tioredoksynę oraz ligazy glutamylocysteinowej -- enzymu limitującego biosyntezę glutationu \cite{maret2019}. Jak wykazali Hernández-Camacho i współautorzy \cite{hernandezcamacho2020}, mechanizm ten nabiera szczególnego znaczenia w tkance mięśniowej w warunkach intensywnego wysiłku fizycznego, gdy cynk chroni grupy sulfhydrylowe białek aparatu kurczliwego (miozyny, aktyny i tropomiozyny) przed nieodwracalnym utlenieniem przez ROS generowane przez mitochondria funkcjonujące na granicy wydolności metabolicznej. Cynk jest ponadto integralnym składnikiem strukturalnym cytozolowej dysmutazy ponadtlenkowej Cu/Zn-SOD (SOD1) -- enzymu odpowiedzialnego za neutralizację anionorodnika ponadtlenkowego; deficyt cynku skutkuje destabilizacją tego białka, gromadzeniem się karbonylowanych produktów uszkodzeń białkowych i narastaniem stresu retikulum endoplazmatycznego, co w dalszej perspektywie indukuje procesy degeneracyjne i przyspiesza starzenie tkankowe \cite{hernandezcamacho2020}. Chasapis i współautorzy \cite{chasapis2020} wskazują, że utrzymanie odpowiednio wysokiego poziomu cynku wewnątrzkomórkowego może bezpośrednio zapobiegać pęknięciom nici DNA indukowanym przez wolne rodniki, gdyż cynk stabilizuje strukturę wyższego rzędu chromatyny poprzez asocjację z kwasowymi resztami fosforanowymi DNA oraz ograniczanie generacji rodnika hydroksylowego w żelazozależnej reakcji Fentona. Obserwacja ta ma doniosłe znaczenie dla profilaktyki chorób neurodegeneracyjnych -- w tym choroby Alzheimera i choroby Parkinsona -- w których udokumentowano głębokie zaburzenia dystrybucji metali przejściowych w obrębie ośrodkowego układu nerwowego.
+
+
+
+% -----------------------------------------------------------
+\subsection{Wpływ na biologię fibroblastów i architekturę cytoszkieletu}
+% -----------------------------------------------------------
+
+Oddziaływanie cynku na fibroblasty odsłania jego zasadniczą rolę w procesach naprawy tkanek, zamykania ran oraz mechanicznej wrażliwości komórek. Hansson \cite{hansson1996}, pracując na linii komórkowej Swiss 3T3, wykazał, że egzogenne jony cynku naśladują działanie mitogenów: stymulując kaskadę kinaz MAP (ERK1/2) i indukując fosforylację reszt tyrozynowych białek sygnałowych, pobudzają fibroblasty zarówno do podziałów, jak i do migracji kierunkowej. Molekularna podstawa tego efektu opiera się na selektywnym i odwracalnym blokowaniu aktywności białkowych fosfataz tyrozynowych (PTP) wskutek koordynacji cynku z resztami cysteinowymi w ich miejscu katalitycznym -- rezultatem jest wzmocnienie i czasowe przedłużenie sygnałów generowanych przez receptory czynników wzrostu PDGF oraz EGF \cite{hansson1996}. Zjawisko to wykazuje jednoznaczną zależność od dawki: stężenia cynku w przedziale nanomolarnym promują proliferację fibroblastów, natomiast stężenia rzędu mikromolarnego hamują podziały i wyzwalają szlak apoptotyczny, co sugeruje, iż lokalna koncentracja tego jonu w mikrośrodowisku rany może precyzyjnie sterować przejściem pomiędzy fazą namnażania a różnicowaniem komórkowym w procesie gojenia \cite{hansson1996, hernandezcamacho2020}.
+
+Strukturalny wymiar zależności fibroblastów od cynku został szczegółowo opisany przez zespół Pérez-Sali \cite{perezsala2015}. Autorzy wykazali, że prawidłowa organizacja sieci wimentyny -- dominującego filamentu pośredniego cytoszkieletu fibroblastów -- jest bezwzględnie uzależniona od interakcji z cynkiem. Wimentyna posiada pojedynczą resztę cysteinową w pozycji 328 (C328), funkcjonującą jako molekularny czujnik stężenia cynku; jej oddziaływanie z Zn\(^{2+}\) warunkuje prawidłową polimeryzację fibryli wimentynowych oraz ich zdolność do dynamicznej reorganizacji pod wpływem bodźców mechanicznych lub oksydacyjnych \cite{perezsala2015}. Co szczególnie istotne, reszta C328 jest wrażliwa zarówno na sygnał cynkowy, jak i na warunki oksydoredukcyjne -- jej utlenienie do formy sulfonamidowej przez silne utleniacze nieodwracalnie blokuje zdolność wiązania cynku, sprzęgając w ten sposób stan redoks komórki z dynamiką jej wewnętrznego rusztowania białkowego. Wycofanie cynku za pomocą chelatorów (np.\ TPEN) prowadzi do gwałtownej depolimeryzacji sieci wimentynowej, zaburzając ruchliwość komórek, prawidłowe rozmieszczenie organelli wewnątrzkomórkowych (lizosomów, mitochondriów, kompleksu Golgiego) oraz zdolność formowania agresomów -- struktur niezbędnych do sekwestracji i degradacji zdenaturowanych białek \cite{perezsala2015}. Obserwacje te dowodzą, że cynk pełni nie tylko funkcję stymulacyjną wobec proliferacji fibroblastów, lecz również determinuje ich wewnętrzną organizację strukturalną i mechaniczną spoistość. Uzupełniająco Hernández-Camacho i współautorzy \cite{hernandezcamacho2020} wskazują, że cynk reguluje różnicowanie mięśniowych komórek satelitarnych poprzez modulację aktywności czynników transkrypcyjnych MyoD i Myf5, a jego niedobór skutkuje upośledzeniem miogenezy i osłabieniem zdolności regeneracyjnej tkanki mięśniowej w następstwie urazów mechanicznych.
+
+% -----------------------------------------------------------
+\subsection{Działanie immunomodulacyjne i rola cynku jako strażnika odporności}
+% -----------------------------------------------------------
+
+Układ odpornościowy należy do systemów organizmu najsilniej reagujących na wahania dostępności cynku, co Wessels i współautorzy \cite{wessels2017} określają mianem pełnienia przez ten mikroelement funkcji \textit{gatekeepera} -- strażnika odporności. Cynk moduluje zarówno odporność nieswoistą, jak i swoistą, ingerując w każdy etap odpowiedzi immunologicznej -- począwszy od aktywacji komórek efektorowych, przez wytwarzanie przeciwciał, aż po kształtowanie pamięci immunologicznej. Hojyo i Fukada \cite{hojyo2016} opisują zjawisko określane jako \textit{fala cynkowa} (ang.\ \textit{zinc wave}), pojawiające się w mastocytach i limfocytach T bezpośrednio po pobudzeniu za pośrednictwem receptorów Fc\(\varepsilon\)RI lub TCR. Nagłe uwolnienie jonów Zn\(^{2+}\) z magazynów wewnątrzkomórkowych -- przede wszystkim z retikulum endoplazmatycznego -- inicjuje kaskady kinazowe (w tym szlaki JAK-STAT i MAPK) oraz wyzwala produkcję cytokin prozapalnych (IL-6, TNF-$\alpha$), stanowiąc szybki sygnał o charakterze parakrynnym, generowany jeszcze przed uruchomieniem transkrypcji genów cytokinowych \cite{hojyo2016}. W komórkach tucznych fala cynkowa pojawia się w ciągu 1--2 minut od zadziałania bodźca, co świadczy o tym, że cynk funkcjonuje jako ultraszybki wewnątrzkomórkowy przekaźnik informacji immunologicznej, dorównujący pod tym względem jonom wapnia.
+
+Istotnym aspektem immunoregulacyjnym jest udział cynku w polaryzacji limfocytów T pomocniczych. Prawidłowy poziom tego pierwiastka sprzyja generowaniu limfocytów T regulatorowych (T\textsubscript{reg}) poprzez stabilizację czynnika transkrypcyjnego FoxP3 oraz hamowanie aktywności deacetylazy SIRT1. Jednocześnie cynk tłumi różnicowanie w kierunku prozapalnych komórek Th17, supresując szlak sygnałowy STAT3 i ograniczając ekspresję ROR\(\gamma\)t -- kluczowego regulatora transkrypcji linii Th17 \cite{kimlee2021}. Niedobór cynku zaburza tę delikatną równowagę, czego konsekwencją jest stan przewlekłego, niskointensywnego zapalenia ogólnoustrojowego, predysponujący do chorób autoimmunologicznych i przyspieszający procesy starzenia immunologicznego.
+
+
+
+% ============================================================
+\section{Flawanony jako ligandy i ich potencjał biologiczny}
+% ============================================================
+
+Flawanony -- wyodrębniona, wysoce bioaktywna podklasa roślinnych polifenoli -- zajmują coraz wyraźniejszą pozycję we współczesnej chemii medycznej i farmakologii molekularnej, pełniąc funkcję wielokierunkowych ligandów zdolnych do oddziaływania z szerokim spektrum celów biologicznych \cite{williamson2018}. Potencjał farmakologiczny tych związków dalece wykracza poza tradycyjnie przypisywane im właściwości antyutleniające i obejmuje złożone procesy modulacji wewnątrzkomórkowych szlaków przekazywania sygnałów, epigenetyczną kontrolę ekspresji genów, interakcje z receptorami jądrowymi oraz wpływ na dynamikę reorganizacji cytoszkieletu -- zespół cech czyniący flawanony obiecującymi kandydatami na celowane leki wobec chorób cywilizacyjnych \cite{kopustinskiene2020}. Współczesne badania interdyscyplinarne nad tą grupą związków łączą metody biologii strukturalnej z zaawansowaną farmakokinetyką, modelowaniem in silico i syntetyczną chemią pochodnych, których ukierunkowane modyfikacje strukturalne umożliwiają osiągnięcie maksymalnego powinowactwa do wybranych celów molekularnych -- enzymów, receptorów membranowych oraz kwasów nukleinowych \cite{santos2020}. Szczególnie interesujący jest aspekt wzajemnej potencjalizacji aktywności biologicznej flawanonów i jonów cynku, wynikający z opisanych wcześniej zdolności chelatacyjnych tych cząsteczek.
+
+% -----------------------------------------------------------
+\subsection{Budowa i właściwości fizykochemiczne flawanonów}
+% -----------------------------------------------------------
+
+Architektura molekularna flawanonów opiera się na szkielecie 2-fenylochroman-4-onu, w którym dwa pierścienie aromatyczne (A i B) połączone są centralnym heterocyklicznym pierścieniem piranowym C. Cechą strukturalną odróżniającą flawanony od pokrewnych flawonów jest nasycenie wiązania pomiędzy węglami C2 i C3 w pierścieniu C, co przerywa koniugację rozległego układu $\pi$-elektronowego i nadaje cząsteczce znaczną swobodę konformacyjną oraz odrębną, nieplanarną topologię przestrzenną -- wyraźnie odmienną od płaskiej geometrii flawonów. Ta trójwymiarowa architektura determinuje odmienny profil interakcji z białkami docelowymi i wpływa na selektywność wiązania z hydrofobowymi kieszeniami w obrębie ośrodków aktywnych enzymów \cite{najmanova2019}. Nasycenie wiązania C2--C3 generuje jednocześnie centrum stereogeniczne przy atomie C2, czego konsekwencją jest istnienie dwóch enancjomerów. W źródłach naturalnych -- owocach cytrusowych, pomidorach, mięcie pieprzowej i wiśniach -- przeważa niemal wyłącznie konfiguracja (2S), co ma zasadnicze znaczenie dla rozpoznawania tych związków przez stereospecyficzne transportery błonowe i enzymy metabolizujące \cite{najmanova2019}. Enancjoselektywność biotransformacji flawanonów jest dobrze udokumentowana: forma (2S)-naringeniny podlega glukuronidacji przez transferazy UGT ze znacznie wyższą szybkością niż odpowiednik (2R), co implikuje odmienne profile biodostępności i biologicznego okresu półtrwania obu izomerów \cite{williamson2018, najmanova2019}.
+
+Właściwości fizykochemiczne i profil farmakologiczny flawanonów są ściśle determinowane przez wzorzec substytucji na pierścieniach aromatycznych, gdzie kluczowe znaczenie mają grupy hydroksylowe, metoksylowe oraz łańcuchy izoprenoidowe \cite{santos2020}. Aglikon o charakterze hydrofobowym -- taki jak naringenina bądź hesperetyna -- charakteryzuje się wysoką zdolnością penetracji barier biologicznych, w tym dwuwarstwy fosfolipidowej błon komórkowych; wartości współczynnika podziału log~P dla typowych aglikonów mieszczą się w przedziale 1,5--3,0, lokując te cząsteczki w optymalnym oknie farmakokinetycznym \cite{najmanova2019}. Natomiast glikozylacja prowadząca do naturalnych form -- naringiny (naringenina-7-glikozyd) czy hesperydyny (hesperetyna-7-rutozyd) -- drastycznie zwiększa polarność cząsteczki (log~P obniża się do wartości ujemnych), ograniczając absorpcję bierną i uzależniając wchłanianie od aktywności hydrolitycznej laktazy rąbka szczoteczkowego (LPH) w jelicie cienkim oraz $\beta$-glukozydaz mikroflory okrężnicy \cite{williamson2018}.
+
+Szczególnie obiecujące perspektywy otwiera chemia syntetyczna i celowane modyfikacje strukturalne. Nowatorskie pochodne ditiokarbaminianowe flawanonów, w których dołączenie grup ditiokarbaminowych oraz strategiczne wprowadzenie atomów halogenów do pierścienia benzopiranowego przebudowuje mapę gęstości elektronowej cząsteczki, wykazują wielokrotnie potęgowaną zdolność eliminacji wolnych rodników i wzmocnioną aktywność przeciwgrzybiczą \cite{birsa2024a, birsa2024b}. Halogeny -- w szczególności fluor i chlor -- poprzez efekt indukcyjny i mezomeryczny modyfikują polaryzację wiązań, zwiększają trwałość wewnątrzkomórkowych rodników enolanowych, a jednocześnie wpływają na lipofilowość i zdolność przenikania barier membranowych \cite{birsa2024a}. Procesy prenylacji, polegające na dołączeniu lipofilowych łańcuchów bocznych o zróżnicowanej długości (jak w likoflawanonie izolowanym z \textit{Glycyrrhiza glabra}), w sposób zasadniczy zmieniają kinetykę dystrybucji tkankowej związku i jego zdolność do przenikania wewnętrznych błon mitochondrialnych \cite{frattaruolo2024}.
+
+% -----------------------------------------------------------
+\subsection{Aktywność biologiczna flawanonów}
+% -----------------------------------------------------------
+
+\subsubsection{Aktywność przeciwnowotworowa}
+
+Działanie przeciwnowotworowe flawanonów opiera się na selektywnej, wieloszlakowej modulacji kaskad sygnalizacyjnych, przy jednoczesnym zachowaniu niskiego profilu toksyczności wobec komórek prawidłowych \cite{kopustinskiene2020}. Badania prowadzone na modelach raka piersi (linie MCF-7 i MDA-MB-231) wykazały, że prenylowane pochodne -- takie jak likoflawanon pozyskiwany z \textit{Glycyrrhiza glabra} -- głęboko zaburzają bioenergetykę mitochondrialną komórek nowotworowych: penetrując wewnętrzną błonę mitochondrialną, w sposób znaczący obniżają potencjał elektrochemiczny (\(\Delta\Psi_m\)), co blokuje syntezę ATP przez mitochondrialną ATP-azę, wyzwala uwolnienie cytochromu~c do cytozolu i uruchamia kaskadę kaspaz typową dla wewnętrznego (mitochondrialnego) szlaku apoptozy \cite{frattaruolo2024}. Istotne jest, że likoflawanon wykazuje selektywność wobec linii Triple Negative (MDA-MB-231) przy zachowaniu niskiej cytotoksyczności wobec prawidłowych komórek MCF-10A, co czyni go wartościowym kandydatem na terapeutyk w jednym z najtrudniejszych klinicznie podtypów raka piersi.
+
+Na liniach raka jelita grubego (HCT-116 i HT-29) wykazano, iż syntetyczne pochodne chromanonowe posiadają zdolność celowanej generacji reaktywnych form tlenu w cytoplazmie komórek nowotworowych, prowadząc do nienaprawialnych pęknięć dwuniciowych DNA (weryfikowanych testem $\gamma$H2AX) oraz trwałego zablokowania cyklu komórkowego w punktach kontrolnych G1/S i G2/M \cite{hikisz2024}. Towarzysząca temu redukcja poziomu cykliny D1 i cykliny B1 przy jednoczesnym wzroście ekspresji inhibitorów kinaz cyklinozależnych (p21\(^{Waf1/Cip1}\) i p27\(^{Kip1}\)) tworzy wielopoziomową blokadę proliferacyjną, kierującą komórkę nowotworową ku katastrofie mitotycznej i nieodwracalnej apoptozie \cite{hikisz2024}. Analizy zależności struktura-aktywność (SAR) przeprowadzone na syntetycznych chalkonach i flawanonach dowodzą, że wprowadzenie grup metoksylowych na pierścieniu B potęguje cytotoksyczność wobec raka nerki do wartości IC\textsubscript{50} porównywalnych z konwencjonalnymi cytostatykami stosowanymi klinicznie \cite{cabrera2007}.
+
+\subsubsection{Aktywność przeciwdrobnoustrojowa}
+
+Wobec narastającego globalnego kryzysu antybiotykooporności flawanony wykazują specyficzne właściwości antybakteryjne, oparte głównie na bezpośredniej ingerencji w integralność osłon komórkowych patogenów \cite{kopustinskiene2020}. Hydrofobowy charakter tych cząsteczek, wzmocniony w przypadku pochodnych prenylowanych i halogenowanych, umożliwia ich interkalację w obrębie fosfolipidowej membrany cytoplazmatycznej bakterii Gram-dodatnich, w tym niebezpiecznych szczepów gronkowca złocistego opornego na metycylinę (MRSA) oraz enterokoków opornych na wankomycynę (VRE) \cite{santos2020}. Interakcje te zaburzają ciekłokrystaliczną strukturę dwuwarstwy lipidowej, zmieniając jej płynność i selektywną przepuszczalność, czego skutkiem jest letalny dla komórki bakteryjnej wyciek jonów potasowych i fosforanowych -- obserwowalny doświadczalnie jako gwałtowne zakwaszanie podłoża hodowlanego po ekspozycji na minimalne stężenie hamujące (MIC) flawanonu \cite{santos2020}. Równolegle flawanony zakłócają bakteryjne procesy komunikacji międzykomórkowej (\textit{quorum sensing}), hamując syntazę N-acylohomoserynoalaktonów (AHL-syntazę) oraz receptory LuxR, co skutecznie blokuje wydzielanie matrycy egzopolisacharydowej i uniemożliwia formowanie dojrzałego biofilmu \cite{kopustinskiene2020}. Zjawisko to ma doniosłe znaczenie kliniczne -- pozbawione ochrony biofilmowej kolonie bakteryjne stają się ponownie podatne na konwencjonalne antybiotyki w schematach terapii skojarzonej, a same flawanony wykazują zdolność dezintegracji dojrzałych biofilmów w warunkach \textit{in vitro} przy stężeniach zbliżonych do ich wartości MIC.
+
+\subsubsection{Aktywność przeciwkrzepliwa}
+
+Kardioprotekcyjny potencjał flawanonów, ze szczególnym uwzględnieniem naringeniny, opiera się na precyzyjnej ingerencji w wewnątrzpłytkową transmisję sygnałów -- mechanizmie odmiennym od działania klasycznych leków przeciwzakrzepowych (heparyny, warfaryny) \cite{tamer2022}. Związki te wykazują znaczne powinowactwo do domen katalitycznych kinazy fosfatydyloinozytolu-3 (PI3K$\gamma$ i PI3K$\beta$) oraz kinazy Akt, skutecznie blokując ich aktywację w odpowiedzi na stymulację agregacyjną wywołaną kolagenem, ADP lub tromboksanem A\textsubscript{2} \cite{huang2021}. Naringenina działa jednocześnie jako allosteryczny aktywator cyklaz nukleotydowych, powodując akumulację cAMP i cGMP w cytoplazmie płytek; podwyższone stężenie cyklicznych przekaźników wtórnych aktywuje kinazy PKA i PKG, fosforylujące białka regulatorowe (VASP, IP\textsubscript{3}R), które blokują mobilizację jonów wapnia z gęstego układu kanalikowego. Wobec braku wzrostu stężenia Ca\(^{2+}\) niemożliwa jest zmiana kształtu płytki, reorganizacja aktyny i degranulacja ziarnistości $\alpha$ zawierających czynniki prozakrzepowe \cite{huang2021}. Badania na modelach zwierzęcych wykazują, że takie wielotorowe działanie efektywnie hamuje powstawanie zakrzepów tętniczych \textit{in vivo} w dawkach nieprzedłużających czasu krwawienia, co wskazuje na selektywną blokadę patologicznej hiperreaktywności płytek bez zaburzania fizjologicznej hemostazy \cite{huang2021}. Ponadto cytrusowe flawanony czynnie regulują metabolizm lipidów, nasilając zwrotny transport cholesterolu poprzez aktywację receptora LXR i indukcję ekspresji ABCA1 -- kluczowego białka efluksu cholesterolu z makrofagów piankowatych blaszki miażdżycowej -- co wzmacnia ich efekt przeciwmiażdżycowy \cite{yang2022}.
+
+\subsubsection{Aktywność antyoksydacyjna}
+
+Flawanony realizują funkcje przeciwutleniające poprzez mechanizmy przeniesienia atomu wodoru (HAT) oraz przeniesienia pojedynczego elektronu (SET), a ich efektywność jest determinowana wzorcem hydroksylacji i charakterem grup podstawnikowych na pierścieniach aromatycznych \cite{santos2020}. Badania syntetycznych 3-ditiokarbaminianów flawanonów pozwoliły na pogłębioną, ilościową analizę zależności SAR w tym zakresie, wykraczającą poza jakościowe obserwacje poczynione dla naturalnych aglikonów. Wprowadzenie atomów halogenu w pozycji \textit{para} pierścienia B \cite{birsa2024a} lub w pozycji C-8 pierścienia benzopiranowego \cite{birsa2024b} wywołuje wyraźny efekt indukcyjny ściągający gęstość elektronową z węgla C2, obniżając energię dysocjacji wiązania O--H grupy hydroksylowej przy C5 i ułatwiając jej homolityczne rozerwanie przez rodniki DPPH lub ABTS. Obliczenia metodami DFT potwierdzają, że atom fluoru w pozycji \textit{para} obniża energię dysocjacji wiązania O--H grupy 5-OH o ok.\ 3--5~kJ/mol w stosunku do niemodyfikowanego analogu, co bezpośrednio przekłada się na przyspieszenie kinetyki eliminacji wolnych rodników \cite{birsa2024a}. Oznaczenia kolorymetryczne z wykorzystaniem rodników DPPH, ABTS oraz testu FRAP dowiodły, że zmodyfikowane w ten sposób cząsteczki wykazują zdolność dezaktywacji wolnych rodników wielokrotnie przewyższającą aktywność standardowych antyutleniaczy przemysłowych (BHT) i kwasu askorbinowego, zapewniając wydajną ochronę błon komórkowych przed peroksydacją lipidów \cite{birsa2024a, birsa2024b}.
+
+\subsubsection{Wpływ na biologię fibroblastów i cytoszkielet}
+
+Zaawansowane preparaty kosmeceutyczne zawierające hesperydynę w połączeniu z niacynamidem wykazują zdolność silnej stymulacji aktywności metabolicznej ludzkich fibroblastów skóry właściwej, skutkując nasileniem transkrypcji genów kolagenu typu I (\textit{COL1A1} i \textit{COL1A2}) oraz fibronektyny, a także przyspieszeniem migracji komórkowej i zamykania rany eksperymentalnej \cite{wessels2012}. Mechanizm działania hesperydyny w fibroblastach obejmuje aktywację receptora TGF-$\beta$1 i fosforylację białek Smad2/3, co bezpośrednio pobudza transkrypcję genów fibrylogennych, a jednocześnie hamuje aktywność metaloproteinaz MMP-1 i MMP-3 odpowiedzialnych za degradację składników macierzy zewnątrzkomórkowej \cite{wessels2012}. Badania histopatologiczne na zwierzęcych modelach chirurgicznych potwierdziły, że podaż hesperydyny optymalizuje architekturę formującej się macierzy zewnątrzkomórkowej, zwiększa stopień usieciowania włókien kolagenowych i znacząco przyspiesza neowaskularyzację -- co jest szczególnie istotne w modelach gojenia ran z zaburzoną perfuzją, takich jak rany cukrzycowe \cite{namdar2025}. Z drugiej strony prostsze strukturalnie analogi -- jak 4-hydroksyflawanon -- wykazują selektywne hamowanie nadmiernej syntezy kolagenu bez przejawów cytotoksyczności; mechanizm ten opiera się na interferowaniu z osią TGF-$\beta$/Smad na poziomie receptorowym, co otwiera perspektywę zastosowania w celowanej terapii zapobiegającej powstawaniu keloidów i włóknieniu narządowemu (wątroby, nerki, płuca) \cite{stipcevic2006}.
+
+\subsubsection{Aktywność immunomodulacyjna}
+
+Flawanony wykazują właściwości skutecznych regulatorów układu odpornościowego, działających na wielu płaszczyznach bez ryzyka głębokiej immunosupresji towarzyszącej terapii kortykosteroidami \cite{kopustinskiene2020}. Suplementacja hesperydyną u zwierząt poddanych wyczerpującemu wysiłkowi fizycznemu skutecznie zapobiega powysiłkowej depresji populacji limfocytów T CD4\(^+\) i CD8\(^+\) oraz komórek Natural Killer (NK) we krwi obwodowej, jednocześnie normalizując stosunek komórek Th1/Th2 zaburzony przez ekstremalny stres fizyczny \cite{ruiz2020}. Równolegle obserwuje się wyraźną redukcję stężenia krążących cytokin prozapalnych -- IL-6, TNF-$\alpha$ i IL-1$\beta$ -- przy wzroście poziomu przeciwzapalnej IL-10, co wskazuje na selektywne przesunięcie odpowiedzi immunologicznej ku fenotypowi regulatorowemu \cite{ruiz2020}. Na szczeblu śluzówkowego układu odpornościowego flawanony stymulują komórki grudek chłonnych kępek Peyera do produkcji wydzielniczej immunoglobuliny sIgA -- pierwszej linii obrony przed patogenami jelitowymi -- co ma kluczowe znaczenie dla utrzymania homeostazy mikrobiomu i integralności bariery jelitowej \cite{camps2017}. Ponadto metylowane pochodne flawanonów skutecznie tłumią ekspresję cząsteczek adhezyjnych VCAM-1 i ICAM-1 na powierzchni komórek nowotworowych i śródbłonkowych, uniemożliwiając transendotelialną migrację neutrofilów i monocytów do ognisk zapalnych lub nowotworowych; efekt ten realizowany jest poprzez supresję aktywności NF-$\kappa$B i zahamowanie fosforylacji I$\kappa$B$\alpha$ \cite{klosek2023}.
+
+% -----------------------------------------------------------
+\subsection{Zdolności chelatujące flawanonów i ich znaczenie biologiczne}
+% -----------------------------------------------------------
+
+Zdolność flawanonów do formowania trwałych kompleksów koordynacyjnych z kationami metali przejściowych stanowi podstawę ich zaawansowanej aktywności fizjologicznej i antyoksydacyjnej, łącząc jednocześnie chemię tych związków z biologią cynku omówioną w poprzednim rozdziale \cite{santos2020}. Cząsteczka flawanonu dysponuje kilkoma topologicznie wyspecjalizowanymi układami elektronodonorowo-koordynacyjnymi. Termodynamicznie najstabilniejszym centrum wiązania metalu jest domena tworzona przez grupę hydroksylową przy atomie C5 w ścisłym sąsiedztwie przestrzennym z grupą karbonylową przy C4, formująca układ $\beta$-keto-enolowy -- tzw.\ domenę 5-OH/4C=O \cite{stipcevic2006, santos2020}. Gdy kation metalu przejściowego -- np.\ Zn\(^{2+}\), Fe\(^{2+/3+}\), Cu\(^{2+}\), Mn\(^{2+}\) lub Al\(^{3+}\) -- zbliża się do tej struktury, wolne pary elektronowe atomów tlenu formują wysoce trwały, sześcioczłonowy pierścień chelatowy o stałych trwałości rzędu 10\(^{5}\)--10\(^{8}\)~M\(^{-1}\), oporny na fizjologiczne wahania pH w przedziale 5--8. W podgrupie flawanonoli (3-hydroksyflawanonów) dodatkowe centrum koordynacyjne tworzy układ grupy 3-hydroksylowej z grupą 4-karbonylową, umożliwiając powstawanie wielordzeniowych struktur polimerycznych o zróżnicowanej geometrii przestrzennej -- tetraedrycznej lub oktaedrycznej -- zależnej od ładunku i preferencji stereochemicznych koordynowanego kationu \cite{stipcevic2006}.
+
+Medyczne i biochemiczne znaczenie zdolności chelatacyjnych jest kluczowe w profilaktyce chorób przewlekłych i schorzeń neurodegeneracyjnych. W stanach patologicznej deregulacji komórkowej (niedokrwienie z następczą reperfuzją, procesy neurozwyrodnieniowe, hemochromatoza) wolne jony żelaza i miedzi katalizują destrukcyjne reakcje Fentona (Fe\(^{2+}\) + H\textsubscript{2}O\textsubscript{2} $\rightarrow$ Fe\(^{3+}\) + OH\(^{\bullet}\) + OH\(^{-}\)) oraz reakcję Habera-Weissa, generując agresywny rodnik hydroksylowy zdolny do atakowania zasad azotowych DNA, aminokwasów białek i wielonienasyconych kwasów tłuszczowych błon komórkowych ze stałą szybkości bliską granicy dyfuzji (10\(^{9}\)~M\(^{-1}\)s\(^{-1}\)). Flawanony, działając jako molekularne chelatatory, wychwytują wolne jony metali z termodynamiczną przewagą nad endogennymi ligandami o niskim powinowactwie, uniemożliwiając zainicjowanie tych łańcuchowych kaskad rodnikowych \cite{santos2020}. Co istotne, tworzenie kompleksów chelatowych modyfikuje właściwości farmakokinetyczne związku: kompleksy flawanonów z jonami cynku czy glinu charakteryzują się zwiększoną lipofilowością w porównaniu z wolnymi aglikonami, co ułatwia ich przechodzenie przez barierę krew-mózg i może stanowić farmakologicznie użyteczną strategię dostarczania cynku do ośrodkowego układu nerwowego \cite{stipcevic2006}. Powstałe metalokompleksy wykazują ponadto synergistycznie wzmocnioną aktywność antyoksydacyjną w stosunku do sumy aktywności samego liganda i wolnego jonu metalu, otwierając nowe możliwości projektowania terapeutyków łączących mechanizmy chelatacji z eliminacją wolnych rodników \cite{santos2020}.
+
+
+
+% ============================================================
+\section{Kompleksy cynku z ligandami flawonoidowymi: zaawansowana chemia, farmakokinetyka i profil bioaktywności}
+% ============================================================
+
+Poznanie natury oddziaływań między jonami metali a flawonoidami stanowi jeden z najdynamiczniej rozwijających się obszarów współczesnej chemii bionieorganicznej i farmakologii molekularnej. Flawonoidy -- polifenolowe metabolity wtórne roślin -- wykazują wrodzoną zdolność do formowania stabilnych asocjatów koordynacyjnych z kationami metali przejściowych. Wśród tych ostatnich cynk (Zn\(^{2+}\)) zajmuje pozycję szczególną, co wynika z jego pełnej biokompatybilności, braku bezpośredniej aktywności oksydoredukcyjnej w warunkach fizjologicznych (konfiguracja d\(^{10}\)) oraz fundamentalnej roli w enzymatycznych systemach obrony antyoksydacyjnej organizmu człowieka. Koordynacja naturalnych flawonoidów z jonami cynku nie tylko w istotny sposób modyfikuje ich cechy fizykochemiczne -- rozpuszczalność w fazie wodnej, lipofilowość czy odporność termiczną -- ale przede wszystkim indukuje efekt synergistyczny, w ramach którego aktywność biologiczna powstałego kompleksu znacząco przewyższa prostą sumę aktywności wolnego liganda organicznego i nieorganicznej soli metalu. Projektowanie takich hybrydowych układów koordynacyjnych stanowi zatem innowacyjne podejście w poszukiwaniu nowych substancji leczniczych o działaniu celowanym.
+
+% -----------------------------------------------------------
+\subsection{Chemia koordynacyjna i zdolność chelatowania jonów cynku przez polifenole}
+% -----------------------------------------------------------
+
+Zdolność flawonoidów do wiązania kationów metali przejściowych, w tym Zn(II), wynika bezpośrednio z ich charakterystycznej budowy molekularnej opartej na szkielecie difenylopropanowym (C6-C3-C6), tworzącym układ 2-fenylochromanu bądź 2-fenylobenzo-$\gamma$-pironu. Cząsteczki te posiadają liczne grupy hydroksylowe (OH) oraz grupę karbonylową (C=O), funkcjonujące jako twarde i pośrednio twarde zasady Lewisa o znacznym powinowactwie do kationów metalicznych \cite{wei2014, walencik2024}. Jak szczegółowo analizują Lapouge i współautorzy na podstawie obliczeń kwantowo-chemicznych (TD-DFT) i badań spektroskopowych, chelatacja zachodzi poprzez specyficzne centra koordynacyjne, których dostępność jest determinowana przez przynależność strukturalną flawonoidu do danej podklasy \cite{lapouge2006}.
+
+Wyróżnia się trzy główne motywy strukturalne warunkujące powstawanie stabilnych kompleksów Zn-flawonoid. Pierwszy z nich -- układ 3-hydroksy-4-karbonylowy w pierścieniu C -- jest charakterystyczny dla flawonoli (kwercetyna, kaempferol, moryna) i uznawany za termodynamicznie najbardziej faworyzowane miejsce wiązania cynku. Koordynacja w tym centrum prowadzi do powstania pięcioczłonowego pierścienia chelatowego; w widmach UV-Vis proces ten przejawia się wyraźnym przesunięciem batochromowym Pasma I (przypisywanego przejściom $\pi \rightarrow \pi^*$ w pierścieniu B), co świadczy o włączeniu pustych orbitali $d$ cynku w układ sprzężonych wiązań $\pi$ liganda \cite{golonko2024, walencik2024}. Drugi motyw -- układ 5-hydroksy-4-karbonylowy, zlokalizowany na styku pierścieni A i C -- stanowi główne centrum koordynacyjne dla flawonów (chryzyna, apigenina) oraz flawanonów (naringenina, hesperetyna), pozbawionych grupy hydroksylowej w pozycji C-3. Tworzący się w tym przypadku sześcioczłonowy pierścień koordynacyjny jest jednoznacznie identyfikowalny w widmach FT-IR: po utworzeniu kompleksu z Zn(II) obserwuje się zanik lub istotne przesunięcie pasma drgań rozciągających $\nu$(C=O) (typowo w okolicy 1650 cm$^{-1}$) ku niższym częstotliwościom, a także modyfikację pasm grupy 5-OH, potwierdzającą jej deprotonację i wiązanie z metalem \cite{woznicka2025, bamigboye2020}. Trzecim centrum chelatującym jest układ orto-dihydroksylowy (grupa katecholowa w pierścieniu B), obecny w rutynie, kwercetynie i izo-orientynie. Choć powinowactwo cynku do tego miejsca jest nieco mniejsze niż żelaza(III) lub miedzi(II), w odpowiednich warunkach (np.\ podwyższone pH) tworzy on stabilne pięcioczłonowe pierścienie koordynacyjne. Chelatacja w obrębie pierścienia B ma kluczowe znaczenie dla potencjalizacji właściwości antyoksydacyjnych liganda \cite{wang2021, lungu2023}.
+
+Dane strukturalne wskazują, że kompleksy te przyjmują najczęściej stechiometrię 1:1, 1:2 lub rzadziej 2:1 i 3:2 (Zn:ligand). Souza i De Giovani \cite{souza2005} wykazali np., że rutyna tworzy z cynkiem rozbudowane sieci polimeryczne o stechiometrii 3:2, w których centra metaliczne uzupełniają swoją sferę koordynacyjną (najczęściej do geometrii tetraedrycznej bądź oktaedrycznej) cząsteczkami wody lub rozpuszczalnika. Powstanie takiej klatki koordynacyjnej usztywnia konformację flawonoidu, co bezpośrednio rzutuje na charakter jego oddziaływań z receptorami błonowymi.
+
+% -----------------------------------------------------------
+\subsection{Kompleksowa analiza farmakokinetyczna w systemie LADMET}
+% -----------------------------------------------------------
+
+Wdrożenie układów metalo-organicznych do praktyki medycznej wymaga szczegółowego prześledzenia ich losów w organizmie ludzkim. Profil LADMET (ang.\ \textit{Liberation, Absorption, Distribution, Metabolism, Elimination, Toxicity}) dla kompleksów cynku z flawonoidami wykazuje istotne różnice względem parametrów wolnych związków, ujawniając szereg korzyści farmakokinetycznych.
+
+\textbf{Liberacja (uwalnianie).} Uwalnianie aktywnego liganda oraz jonu metalicznego z formy kompleksowej jest ściśle uzależnione od pH środowiska przewodu pokarmowego. Większość wolnych flawonoidów w kwaśnym środowisku żołądkowym ulega szybkiej degradacji lub niepożądanym izomeryzacjom. Koordynacja z cynkiem stabilizuje strukturę cząsteczki: w pH soku żołądkowego (1,5--2,0) kompleksy pozostają protonowane i względnie trwałe, chroniąc ligand przed rozkładem. Dysocjacja na jony i aktywny składnik organiczny następuje dopiero w zasadowym środowisku jelita cienkiego (pH 7,0--8,0), umożliwiając kontrolowane, przedłużone uwalnianie substancji biologicznie czynnych \cite{maares2020}.
+
+\textbf{Absorpcja (wchłanianie).} Wchłanianie stanowi etap limitujący biodostępność większości polifenoli, charakteryzujących się jednocześnie niską rozpuszczalnością w wodzie i niską przepuszczalnością (klasa IV wg BCS). Koordynacja z metalem modyfikuje współczynnik podziału (log~P). Badania Wanga i współautorów \cite{wang2021} nad kompleksem izo-orientyny z cynkiem, prowadzone z wykorzystaniem pomiarów kąta zwilżania, wykazały wyraźną poprawę hydrofilowości przy jednoczesnym zachowaniu zdolności penetracji barier lipidowych. Wchłanianie zachodzi głównie w enterocytach dwunastnicy i jelita czczego, przebiegając dwutorowo: przez bierną dyfuzję całego kompleksu oraz -- po częściowej dysocjacji -- za pośrednictwem dedykowanych transporterów błonowych. Cynk jest aktywnie absorbowany przez apikalne białko ZIP4 (\textit{SLC39A4}), co paradoksalnie może ułatwiać lokalne zagęszczanie uwolnionego liganda w otoczeniu mikrokosmków jelitowych \cite{stiles2024, hara2017}.
+
+\textbf{Dystrybucja.} Transport osoczowy determinuje narządowe miejsce docelowego działania kompleksu. Po dostaniu się do krążenia wrotnego ok.\ 70--80\% cynku wiązane jest przez albuminę surowiczą, a 20--30\% przez \(\alpha_2\)-makroglobulinę \cite{stiles2024}. Wolne flawonoidy nierzadko wiążą się z białkami osocza nazbyt silnie, co redukuje ich wolną (aktywną biologicznie) frakcję. Przestrzenna budowa kompleksu metalicznego zapobiega nadmiernemu sekwestrowaniu na albuminach, ułatwiając uwalnianie do tkanek. Dzięki obecności transportera ZnT1 cynk z kompleksem jest dystrybuowany przede wszystkim do mięśni szkieletowych, kości i wątroby, a wysoka lipofilowość pewnych form (np.\ kompleksów flawanonów) ułatwia im przenikanie przez barierę krew-mózg (BBB), co jest istotne w strategiach neuroprotekcji \cite{najmanova2019, williamson2018}.
+
+\textbf{Metabolizm (biotransformacja).} W hepatocytach flawonoidy podlegają intensywnemu metabolizmowi I fazy (oksydacja przez izoenzymy cytochromu P450) oraz II fazy (reakcje sprzęgania -- glukuronidacja przez enzymy UGT, siarczanowanie przez SULT) \cite{yang2022}. Koordynacja jonu cynku z grupami hydroksylowymi (zwłaszcza w pozycjach C3 i C5) steryczne i elektrostatycznie ,,maskuje'' te wrażliwe miejsca przed atakiem nuklefilowym enzymów koniugacyjnych. Zjawisko to, określane mianem efektu ochronnego chelatacji, wielokrotnie wydłuża biologiczny okres półtrwania (t\(_{1/2}\)) flawonoidu w surowicy i zapobiega jego szybkiej metabolicznej inaktywacji \cite{williamson2018}.
+
+\textbf{Eliminacja (wydalanie).} Cynk jest eliminowany z organizmu głównie drogą wewnątrzjelitową (sekrecja endogenna do światła jelita, m.in.\ przez transporter ZnT5B) i usuwany z kałem. Polarne metabolity flawonoidowe, o ile ulegną rozkładowi, wydalane są drogą nerkową. Kompleksy o wysokiej masie cząsteczkowej omijają szybką filtrację kłębuszkową, podlegając reabsorpcji w kanalikach nerkowych, co przedłuża ich cyrkulację systemową \cite{stiles2024, najmanova2019}.
+
+\textbf{Toksyczność.} Kompleksy cynku z flawonoidami zaliczane są do farmakoforów o wysokim profilu bezpieczeństwa. Wang i współautorzy \cite{wang2021} wykazali, że izo-orientyna w połączeniu z cynkiem charakteryzuje się obniżonym wskaźnikiem hemolizy ludzkich erytrocytów w porównaniu z samym ligandem. Jedynym istotnym czynnikiem ryzyka pozostaje potencjalne hamowanie wchłaniania miedzi przy długotrwałej podaży wysokich dawek cynku (mechanizm oparty na indukcji metalotionein w enterocytach), mogące prowadzić do niedokrwistości wtórnej; z tego powodu proporcje jonów w preparatach muszą być precyzyjnie dobrane.
+
+
+
+% -----------------------------------------------------------
+\subsection{Rozszerzony profil aktywności biologicznych i efekty synergistyczne}
+% -----------------------------------------------------------
+
+Synergia wynikająca z połączenia cynku ze strukturami flawonoidowymi jest obserwowana w wielu odrębnych szlakach fizjologicznych i patologicznych.
+
+\subsubsection{Wielokierunkowa aktywność przeciwnowotworowa}
+
+Chemioprewencja i wspomaganie terapii onkologicznej z wykorzystaniem kompleksów Zn-flawonoid stanowią obiecującą alternatywę dla wysoce toksycznych klasycznych cytostatyków. Tu i współpracownicy \cite{tu2016}, badając kompleks kaempferolu z cynkiem na liniach raka okrężnicy i raka piersi (MCF-7), wykazali, że taka hybryda znacznie skuteczniej niż wolny ligand indukuje wewnętrzny (mitochondrialny) szlak apoptozy. Mechanizm ten opiera się na obniżeniu ekspresji antyapoptotycznego białka Bcl-2 przy jednoczesnym wzroście poziomu proapoptotycznego białka Bax, co skutkuje permeabilizacją błon mitochondrialnych, uwolnieniem cytochromu~\textit{c} do cytozolu i aktywacją wykonawczych kaspaz (-9, -8, a ostatecznie kaspazy-3) \cite{tu2016, golonko2024}.
+
+Chasapis i współautorzy \cite{chasapis2020} dowodzą, że cynk jest nieodzowny jako metalochaperon dla białka supresorowego p53. Dostarczenie cynku do wnętrza komórki nowotworowej za pośrednictwem lipofilowego nośnika flawonoidowego przywraca zmutowanemu białku p53 prawidłową konformację palca cynkowego, co skutkuje zatrzymaniem niekontrolowanego cyklu podziałowego w fazie G2/M \cite{chasapis2020}. Hikisz i współautorzy \cite{hikisz2024} wskazują ponadto, że kompleksy pochodnych flawanonu modulują maszynerię epigenetyczną komórek nowotworowych, oddziałując na wzorzec metylacji wysp CpG w promotorach genów supresorowych. Frattaruolo i współpracownicy \cite{frattaruolo2024} wykazali dodatkowo, że prenylowane kompleksy dezorganizują bioenergetykę mitochondrialną komórek neoplastycznych, indukując gwałtowny spadek potencjału błonowego mitochondriów i generację wewnątrzkomórkowych ROS w stężeniach przekraczających pojemność buforową endogennych antyoksydantów.
+
+\subsubsection{Aktywność proliferacyjna fibroblastów i inżynieria regeneracji tkankowej}
+
+Tkanka łączna, ze względu na intensywny obrót kolagenu, wykazuje silną zależność od cynku, który reguluje polimeryzację wimentyny (poprzez resztę Cys328) i stanowi kofaktor polimeraz RNA oraz DNA niezbędnych do podziałów komórkowych. Stipcevic i współautorzy \cite{stipcevic2006} wykazali, że flawonoidy w formie metalokompleksów (zwłaszcza rutyna, chryzyna i moryna) wywierają znaczny wpływ na ludzkie fibroblasty skórne. W odróżnieniu od wolnej kwercetyny, która w wyższych dawkach może przejawiać pewną cytotoksyczność, kompleksy z cynkiem istotnie stymulują ekspresję i sekrecję kolagenu typu I i III -- co potwierdzono ilościowo testem Sirius Red. Ponadto Namdar i współautorzy \cite{namdar2025} w badaniach na zwierzęcych modelach chirurgicznych udowodnili, że podaż flawanonu (hesperydyny) wzbogaconego o jony metaliczne w znacznym stopniu przyspiesza gojenie ran. Działanie to wynika ze skrócenia fazy zapalnej i wcześniejszego wejścia w fazę proliferacyjną, podczas której fibroblasty migrują do łożyska rany. Cynk moduluje równowagę między metaloproteinazami macierzy (MMPs) a ich tkankowymi inhibitorami (TIMPs), zapobiegając zarówno przewlekłemu owrzodzeniu, jak i powstawaniu patologicznych blizn i keloidów \cite{wessels2012}.
+
+\subsubsection{Regulacja krzepnięcia, hamowanie agregacji i ochrona śródbłonka naczyniowego}
+
+W kardiologii molekularnej flawanony -- ze szczególnym uwzględnieniem naringeniny -- zyskują uznanie jako naturalne inhibitory patologicznej hemostazy. Huang i współpracownicy \cite{huang2021} oraz Tamer i współautorzy \cite{tamer2022} definiują mechanizm, w którym kompleksy flawonoidowe z cynkiem zapobiegają aktywacji płytek krwi indukowanej przez endogenne agonisty (ADP, kolagen, trombina). Na poziomie wewnątrzkomórkowym kompleksy te hamują szlak fosfoinozytydo-3-kinazy (PI3K) i kinazy Akt, blokując kaskadę prowadzącą do reorganizacji cytoszkieletu trombocytu i egzocytozy zawartości ziaren $\alpha$ (w tym czynnika von Willebranda i tromboksanu A\textsubscript{2}).
+
+Równocześnie jony cynku dostarczane przez kompleks flawonoidowy do komórek śródbłonka pełnią funkcję strukturalną w stabilizacji dimeru śródbłonkowej syntazy tlenku azotu (eNOS). Wyłącznie sprzężona forma eNOS jest zdolna do syntezy tlenku azotu (NO) z L-argininy. W warunkach stresu oksydacyjnego, przy niedostatecznej podaży cynku, eNOS ulega rozprzęgnięciu i zamiast NO generuje toksyczne anionorodniki ponadtlenkowe. Prawidłowo funkcjonująca syntaza uwalnia NO -- najsilniejszy naturalny czynnik rozszerzający naczynia i hamujący agregację płytek -- chroniąc tym samym przed zakrzepicą tętniczą i incydentami wieńcowymi \cite{costa2023, yang2022}.
+
+\subsubsection{Działanie przeciwdrobnoustrojowe, antywirusowe i hamowanie biofilmu}
+
+Narastająca oporność bakterii na klasyczne antybiotyki wymusiła intensywne poszukiwania związków na bazie fitochemikaliów. Dyba i współautorzy \cite{dyba2025} szczegółowo zbadali oddziaływania kompleksu Zn(II)-3-hydroksyflawon z modelowymi błonami bakteryjnymi metodą monowarstw Langmuira. Uzyskane wyniki potwierdziły, że dzięki podwyższonej lipofilowości kompleks cynkowy z łatwością penetruje błonę zewnętrzną bakterii Gram-ujemnych (\textit{E. coli}) oraz ścianę komórkową bakterii Gram-dodatnich (\textit{S. aureus}). Wbudowanie się kompleksu w warstwę lipidową zaburza potencjał przezbłonowy i powoduje śmiertelny dla mikroorganizmu wyciek cytoplazmatyczny \cite{bamigboye2020}. Woźnicka i współpracownicy \cite{woznicka2025} wykazali z kolei, że cynkowe kompleksy chryzyny posiadają silny potencjał hamowania biofilmu bakteryjnego. Kompleks Zn-chryzyna skutecznie zakłóca system quorum sensing, uniemożliwiając adhezję drobnoustrojów do powierzchni tkanek czy cewników medycznych \cite{wang2021}.
+
+\subsubsection{Wyspecjalizowana aktywność antyoksydacyjna i ochrona redoks}
+
+Paradoksalnie, mimo że cynk nie uczestniczy w reakcjach utleniania ani redukcji w warunkach fizjologicznych, jego dołączenie do cząsteczki flawonoidu wielokrotnie potęguje jej zdolność dezaktywacji reaktywnych form tlenu (ROS). Birsa i Sarbu \cite{birsa2024a, birsa2024b} wykazali, że obecność atomów cynku, a w szczególności halogenów w pozycji C-8, w sposób istotny obniża energię dysocjacji wiązań O-H w układzie. Działanie to przebiega według dwóch głównych mechanizmów fizykochemicznych: przeniesienia atomu wodoru (HAT) oraz transferu pojedynczego elektronu (SET). Co istotniejsze, cynk jako silny kation zajmuje ,,puste'' centra koordynacyjne w cząsteczkach flawonoidów, uniemożliwiając wiązanie w tych miejscach wolnych jonów żelaza i miedzi. Blokuje to bezpośrednio katalityczne reakcje Fentona i Habera-Weissa -- główne szlaki generacji najbardziej agresywnych rodników hydroksylowych ($^\bullet$OH) w tkankach \cite{santos2020, maret2019}.
+
+\subsubsection{Immunomodulacja i celowane działanie przeciwzapalne}
+
+Ruiz-Iglesias i współautorzy \cite{ruiz2020} wykazali, że hesperydyna suplementowana łącznie z cynkiem skutecznie zapobiega immunosupresji indukowanej wyczerpującym wysiłkiem fizycznym. Reguluje ona rozmieszczenie subpopulacji limfocytów T w narządach limfatycznych oraz hamuje wytwarzanie immunosupresyjnego białka TGF-$\beta$. Na płaszczyźnie molekularnej przeciwzapalne mechanizmy kompleksów flawonoid-Zn opierają się na blokowaniu kaskady kwasu arachidonowego. Kłósek i współpracownicy \cite{klosek2023} oraz Venkatachalam i współautorzy \cite{venkatachalam2022}, badając metylowe pochodne flawanonów, wykazali że substancje te inhibują kluczowe enzymy zaangażowane w procesy zapalne: cyklooksygenazy (COX-1 i COX-2) oraz lipooksygenazy (LOX). Zahamowanie tych enzymów ogranicza produkcję prozapalnych prostaglandyn (PGE2) i leukotrienów. Ponadto cynk stymuluje ekspresję białka A20, które deubikwitynuje składniki szlaku NF-$\kappa$B, wygaszając sygnał prozapalny i ograniczając wytwarzanie cytokin -- interleukiny 1-beta (IL-1$\beta$), IL-6 oraz czynnika martwicy nowotworu (TNF-$\alpha$) przez makrofagi. Właściwości te czynią kompleksy cynku z flawonoidami bezpieczną alternatywą wobec niesteroidowych leków przeciwzapalnych (NLPZ) w terapii przewlekłych schorzeń reumatycznych.
+
+% ============================================================
+% BIBLIOGRAFIA UJEDNOLICONA
+% ============================================================
+\newpage
+\begin{thebibliography}{99}
+
+% --- Cynk ---
+\bibitem{bafaro2017}
+Bafaro, E., Bhatt, D., i in. (2017). The emerging role of zinc transporters in cellular homeostasis and cancer. \textit{Signal Transduction and Targeted Therapy}, 2, e17029.
+
+\bibitem{chasapis2020}
+Chasapis, C.~T., Loutsidou, A.~C., Spiliopoulou, C.~A., Stefanidou, M.~E. (2020). Recent aspects of the effects of zinc on human health. \textit{Archives of Toxicology}, 94, 1443--1460.
+
+\bibitem{chen2024}
+Chen, B., Yu, P., i in. (2024). Cellular zinc metabolism and zinc signaling: from biological functions to diseases and therapeutic targets. \textit{Signal Transduction and Targeted Therapy}, 9, 6.
+
+\bibitem{costa2023}
+Costa, M.~I., Sarmento-Ribeiro, A.~B., Gonçalves, A.~C. (2023). Zinc: From Biological Functions to Therapeutic Potential. \textit{International Journal of Molecular Sciences}, 24, 4822.
+
+\bibitem{hansson1996}
+Hansson, A. (1996). Extracellular Zinc Ions Induces Mitogen-Activated Protein Kinase Activity in Swiss 3T3 Fibroblasts. \textit{Archives of Biochemistry and Biophysics}, 328(2), 233--238.
+
+\bibitem{hara2017}
+Hara, T., Takeda, T.-a., Takagishi, T., Fukue, K., Kambe, T., Fukada, T. (2017). Physiological roles of zinc transporters: molecular and genetic importance in zinc homeostasis. \textit{Journal of Physiological Sciences}, 67(2), 283--301.
+
+\bibitem{hernandezcamacho2020}
+Hernández-Camacho, J.~D., Vicente-García, C., Parsons, D.~S., Navas-Enamorado, I. (2020). Zinc at the crossroads of exercise and proteostasis. \textit{Redox Biology}, 35, 101529.
+
+\bibitem{hojyo2016}
+Hojyo, S., Fukada, T. (2016). Roles of Zinc Signaling in the Immune System. \textit{Journal of Immunology Research}, 2016, 6762343.
+
+\bibitem{kambe2015}
+Kambe, T., Tsuji, T., Hashimoto, A., Itsumura, N. (2015). The Physiological, Biochemical, and Molecular Roles of Zinc Transporters in Zinc Homeostasis and Metabolism. \textit{Physiological Reviews}, 95, 749--784.
+
+\bibitem{kimlee2021}
+Kim, B., Lee, W.-W. (2021). Regulatory Role of Zinc in Immune Cell Signaling. \textit{Molecules and Cells}, 44(5), 335--341.
+
+\bibitem{maares2020}
+Maares, M., Haase, H. (2020). A Guide to Human Zinc Absorption: General Overview and Recent Advances of In Vitro Intestinal Models. \textit{Nutrients}, 12(3), 762.
+
+\bibitem{maret2019}
+Maret, W. (2019). The redox biology of redox-inert zinc ions. \textit{Free Radical Biology and Medicine}, 134, 311--326.
+
+\bibitem{ni2022}
+Ni, C., Fang, Q.-Q., i in. (2022). ZIP1\(^+\) fibroblasts protect lung cancer against chemotherapy via connexin-43 mediated intercellular Zn\(^{2+}\) transfer. \textit{Nature Communications}, 13, 5919.
+
+\bibitem{perezsala2015}
+Pérez-Sala, D., Oeste, C.~L., i in. (2015). Vimentin filament organization and stress sensing depend on its single cysteine residue and zinc binding. \textit{Nature Communications}, 6, 7287.
+
+\bibitem{stiles2024}
+Stiles, L.~I., Ferrao, K., Mehta, K.~J. (2024). Role of zinc in health and disease. \textit{Clinical and Experimental Medicine}, 24(1), 38.
+
+\bibitem{tamura2021}
+Tamura, Y. (2021). The Role of Zinc Homeostasis in the Prevention of Diabetes Mellitus and Cardiovascular Diseases. \textit{Journal of Atherosclerosis and Thrombosis}, 28, 1109--1122.
+
+\bibitem{wessels2017}
+Wessels, I., Maywald, M., Rink, L. (2017). Zinc as a Gatekeeper of Immune Function. \textit{Nutrients}, 9(12), 1286.
+
+% --- Flawanony ---
+\bibitem{birsa2024a}
+Birsa, M.~L., Sarbu, L.~G. (2024). Novel Dithiocarbamic Flavanones with Antioxidant Properties -- A Structure-Activity Relationship Study. \textit{International Journal of Molecular Sciences}, 25, 13698.
+
+\bibitem{birsa2024b}
+Birsa, M.~L., Sarbu, L.~G. (2024). A Structure-Activity Relationship Study on the Antioxidant Properties of Dithiocarbamic Flavanones. \textit{Antioxidants}, 13, 963.
+
+\bibitem{cabrera2007}
+Cabrera, M., Simoens, M., i in. (2007). Synthetic chalcones, flavanones, and flavones as antitumoral agents: Biological evaluation and structure-activity relationships. \textit{Bioorganic \& Medicinal Chemistry}, 15, 3356--3367.
+
+\bibitem{camps2017}
+Camps-Bossacoma, M., Franch, A., Pérez-Cano, F.~J., Castell, M. (2017). Influence of Hesperidin on the Systemic and Intestinal Rat Immune Response. \textit{Nutrients}, 9, 1205.
+
+\bibitem{frattaruolo2024}
+Frattaruolo, L., Lauria, G., i in. (2024). Exploiting \textit{Glycyrrhiza glabra} L. (Licorice) Flavanones: Licoflavanone's Impact on Breast Cancer Cell Bioenergetics. \textit{International Journal of Molecular Sciences}, 25, 7907.
+
+\bibitem{hikisz2024}
+Hikisz, P., Wawrzyniak, P., i in. (2024). Evaluation of In Vitro Biological Activity of Flavanone/Chromanone Derivatives: Molecular Analysis of Anticancer Mechanisms in Colorectal Cancer. \textit{International Journal of Molecular Sciences}, 25, 12985.
+
+\bibitem{huang2021}
+Huang, M., Deng, M., i in. (2021). Naringenin Inhibits Platelet Activation and Arterial Thrombosis Through Inhibition of Phosphoinositide 3-Kinase and Cyclic Nucleotide Signaling. \textit{Frontiers in Pharmacology}, 12, 722257.
+
+\bibitem{klosek2023}
+Kłósek, M., Krawczyk-Łebek, A., i in. (2023). In Vitro Anti-Inflammatory Activity of Methyl Derivatives of Flavanone. \textit{Molecules}, 28, 7837.
+
+\bibitem{kopustinskiene2020}
+Kopustinskiene, D.~M., Jakstas, V., Savickas, A., Bernatoniene, J. (2020). Flavonoids as Anticancer Agents. \textit{Nutrients}, 12, 457.
+
+\bibitem{najmanova2019}
+Najmanová, I., Vopršalová, M., Saso, L., Mladěnka, P. (2019). The pharmacokinetics of flavanones. \textit{Critical Reviews in Food Science and Nutrition}, 60(22), 3825--3843.
+
+\bibitem{namdar2025}
+Namdar, P., Shiva, A., i in. (2025). The Effects of Hesperidin on the Healing Process of Cleft Lip Surgical Wounds in Rats: A Histological Evaluation and Therapeutic Analysis. \textit{Iranian Journal of Otorhinolaryngology}, 37(6).
+
+\bibitem{ruiz2020}
+Ruiz-Iglesias, P., Estruel-Amades, S., i in. (2020). Influence of Hesperidin on Systemic Immunity of Rats Following an Intensive Training and Exhausting Exercise. \textit{Nutrients}, 12, 1791.
+
+\bibitem{santos2020}
+Santos, C.~M.~M., Silva, A.~M.~S. (2020). The Antioxidant Activity of Prenylflavonoids. \textit{Molecules}, 25, 696.
+
+\bibitem{stipcevic2006}
+Stipcevic, T., Piljac, J., Vanden~Berghe, D. (2006). Effect of Different Flavonoids on Collagen Synthesis in Human Fibroblasts. \textit{Plant Foods for Human Nutrition}, 61, 29--34.
+
+\bibitem{tamer2022}
+Tamer, F., Tullemans, B.~M.~E., i in. (2022). Nutrition Phytochemicals Affecting Platelet Signaling and Responsiveness: Implications for Thrombosis and Hemostasis. \textit{Thrombosis and Haemostasis}, 122, 879--894.
+
+\bibitem{wessels2012}
+Wessels, Q., Pretorius, E., Smith, C.~M., Nel, H. (2012). The potential of a niacinamide dominated cosmeceutical formulation on fibroblast activity and wound healing in vitro. \textit{International Wound Journal}, 10(5), 560--564.
+
+\bibitem{williamson2018}
+Williamson, G., Kay, C.~D., Crozier, A. (2018). The Bioavailability, Transport, and Bioactivity of Dietary Flavonoids: A Review from a Historical Perspective. \textit{Comprehensive Reviews in Food Science and Food Safety}, 17, 1054--1112.
+
+\bibitem{yang2022}
+Yang, Y., Trevethan, M., Wang, S., Zhao, L. (2022). Beneficial effects of citrus flavanones naringin and naringenin and their food sources on lipid metabolism: An update on bioavailability, pharmacokinetics, and mechanisms. \textit{Journal of Nutritional Biochemistry}, 104, 108967.
+
+% --- Kompleksy Zn-flawonoid ---
+\bibitem{bamigboye2020}
+Bamigboye, O.~M., i in. (2020). Synthesis, Characterization, and Antimicrobial Potentials of Flavonoid-Metal Complexes. \textit{Iraqi Journal of Science}, 61, 2440--2447.
+
+\bibitem{dyba2025}
+Dyba, B., i in. (2025). The effects of 3-hydroxyflavone complexes on bacterial cell membranes. \textit{Scientific Reports}, 15, 20743.
+
+\bibitem{golonko2024}
+Golonko, A., i in. (2024). Investigating the Interaction between Kaempferol and Zinc Ions. \textit{Materials}, 17, 2526.
+
+\bibitem{lapouge2006}
+Lapouge, C., i in. (2006). Spectroscopic and Theoretical Studies of the Zn(II) Chelation with Hydroxyflavones. \textit{Journal of Physical Chemistry A}, 110, 12494--12500.
+
+\bibitem{lungu2023}
+Lungu, I.~I., i in. (2023). Catechin-Zinc-Complex: Synthesis, Characterization and Biological Activity Assessment. \textit{Farmacia}, 71, 755--763.
+
+\bibitem{souza2005}
+Souza, R.~F.~V., De Giovani, W.~F. (2005). Synthesis, spectral and electrochemical properties of Al(III) and Zn(II) complexes with flavonoids. \textit{Spectrochimica Acta A}, 61, 1985--1990.
+
+\bibitem{tu2016}
+Tu, L.-Y., i in. (2016). Synthesis, characterization and anticancer activity of kaempferol-zinc(II) complex. \textit{Bioorganic \& Medicinal Chemistry Letters}, 26, 23734.
+
+\bibitem{venkatachalam2022}
+Venkatachalam, H., i in. (2022). Evaluation of Anti-inflammatory Potentials of Novel Flavonols and Their Metal Complexes. \textit{Engineering Science}, 18, 217--223.
+
+\bibitem{walencik2024}
+Walencik, P.~K., i in. (2024). Metal-Flavonoid Interactions: From Simple Complexes to Advanced Systems. \textit{Molecules}, 29, 2573.
+
+\bibitem{wang2021}
+Wang, X., i in. (2021). Synthesis, Structure Characterization, and Antibacterial Activity Study of Iso-orientin-Zinc Complex. \textit{Journal of Agricultural and Food Chemistry}, 69, 3952--3964.
+
+\bibitem{wei2014}
+Wei, Y., Guo, M. (2014). Zinc-Binding Sites on Selected Flavonoids. \textit{Biological Trace Element Research}, 161, 223--230.
+
+\bibitem{woznicka2025}
+Woźnicka, E., i in. (2025). Mn(II), Co(II), and Zn(II) Complexes with Chrysin: Antibacterial and Anti-Biofilm Insights. \textit{Processes}, 13, 2468.
+
+\end{thebibliography}
+
+\end{document}
